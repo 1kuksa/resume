@@ -1,0 +1,129 @@
+<div>
+    <div>
+        <h1>{{name}}</h1>
+    </div>
+    <div><span>{{description}}</span></div></br>
+    <hr>
+    <h2>History</h2>
+    <div>
+        {{#with history}}
+        <div>Year: {{year}}</div> Founder: <em>{{founder}}</em>
+        {{/with}}
+    </div>
+    </br>
+    <hr>
+    <h3>Types:</h3>
+    <div>
+        <ul>
+            {{#each types}}
+            <li>
+                {{>button data=this}}
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    </br>
+    <hr>
+    <div>
+        <h3>Syntax:</h3>
+        <ul>
+            {{#with syntax}}
+            <div>
+                <li>
+                    <h4>Variables:</h4>
+                    {{#each variables}}
+
+                    {{>button2 data=this}}
+                    {{/each}}
+                </li>
+                </br>
+                <li>
+                    <h4>Conditionals:</h4>
+
+                    {{#each fconditionals}}
+                    {{>button2 data=this}}
+                    {{/each}}
+                </li>
+                </br>
+                <li>
+                    <h4>Functions:</h4>
+
+                    {{#each functions}}
+                    {{>button2 data=this}}
+                    {{/each}}
+                </li>
+                </br>
+                <li>
+                    <h4>Loops:</h4>
+
+                    {{#each loops}}
+                    {{>button2 data=this}}
+                    {{/each}}
+                </li>
+                </br>
+
+                <li>
+                    <h4>Classes:</h4>
+
+                    {{#each classes}}
+                    {{>button2 data=this}}
+                    {{/each}}
+                </li>
+                </br>
+            </div>
+            {{/with}}
+        </ul>
+    </div>
+
+    <hr>
+    <div>
+        <h3>Features:</h3>
+        <div>
+            {{#each features}}
+            {{>button data=this}}
+            {{/each}}
+        </div>
+    </div>
+    </br>
+    <hr>
+    <div>
+        <h3>Libraries:</h3>
+        <div>
+            {{#each libraries}}
+            {{>button data=this}}
+            {{/each}}
+        </div>
+    </div>
+    </br>
+    <hr>
+    <div>
+        <h3>Tools:</h3>
+        <div>
+            {{#each tools}}
+            {{>button data=this}}
+            {{/each}}
+        </div>
+    </div>
+    </br>
+    <hr>
+    <div>
+        <h3>Community:</h3>
+        <div>
+            <ul>
+                {{#each community}}
+                <li>
+                    <em>{{name}}</em>
+                    {{>button data=type}}
+                    </br>
+                    </br>
+                </li>
+
+
+                {{/each}}
+
+            </ul>
+        </div>
+    </div>
+    </br>
+    <hr>
+</div>

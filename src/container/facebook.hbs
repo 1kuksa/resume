@@ -1,0 +1,189 @@
+<div>
+    <div>
+        <center>
+            <h1><span class="badge bg-secondary ">{{name}}</span></h1>
+        </center>
+        <p class="placeholder-glow">
+            <span class="placeholder col-12"></span>
+        </p>
+    </div>
+    <div>
+        <ul>
+            {{#each users}}
+            <li>
+                <div><span class="badge text-bg-dark">
+                        <div><strong>Id :</strong> {{id}}
+                        </div>
+                    </span>
+
+                    <div><strong>Name :</strong> {{name}}
+                    </div>
+                    <div><strong>Gender :</strong> {{gender}}
+                    </div>
+                    <div><strong>Age :</strong> {{age}}
+                    </div>
+                    <br>
+
+                    <span class="badge text-bg-primary">
+                        <h4>Friends:</h4>
+                    </span>
+                    <br>
+                    <ul>
+                        {{#each friends}}
+                        <div>
+                            <li>
+                                <div class="alert alert-warning" role="alert">
+                                    <span class="badge rounded-pill text-bg-info">
+                                        <div><strong>Id :</strong> {{id}}
+                                        </div>
+                                    </span>
+
+                                    <div><strong>Name :</strong> {{name}}
+                                    </div>
+                                    <div><strong>Gender :</strong> {{gender}}
+                                    </div>
+                                    <div><strong>Age :</strong> {{age}}
+
+                                    </div>
+                                    <br>
+                                    <span class="badge text-bg-primary">
+                                        <h5>Mutual friends:</h5>
+                                    </span>
+                                    {{#each mutual_friends}}
+                                    <div><strong>Id :</strong> {{id}}
+                                    </div>
+                                    <div><strong>Name :</strong> {{name}}
+                                    </div>
+                                    <div><strong>Gender :</strong> {{gender}}
+                                    </div>
+                                    <div><strong>Age :</strong> {{age}}
+                                    </div>
+                                    <br>
+
+
+
+
+                                    {{#if mutual_friends }}
+                                    <hr>
+                                    <span class="badge text-bg-primary">
+                                        <h5>Mutual friends:</h5>
+                                    </span>
+                                    <ul>
+                                        {{#each mutual_friends}}
+                                        <li>
+                                            <div><strong>Id :</strong> {{id}}
+                                            </div>
+                                            <div><strong>Name :</strong> {{name}}
+                                            </div>
+                                            <div><strong>Gender :</strong> {{gender}}
+                                            </div>
+                                            <div><strong>Age :</strong> {{age}}
+                                            </div>
+
+                                        </li>
+                                        {{/each}}
+                                    </ul>
+
+                                    {{/if}}
+                                    {{/each}}
+
+                                    {{#if groups }}
+                                    <hr>
+                                    <span class="badge text-bg-primary">
+                                        <h4>Groups:</h4>
+                                    </span>
+                                    <br>
+                                    <ul>
+                                        {{#each groups}}
+
+                                        <li>
+                                            <div class="alert alert-warning" role="alert">
+                                                <div>
+                                                    <span class="badge rounded-pill text-bg-info">
+                                                        <div><strong>Id :</strong> {{id}}
+                                                        </div>
+                                                    </span>
+
+                                                    <div><strong>Name :</strong> {{name}}
+                                                    </div>
+                                                    <p>{{description}}</p>
+                                                    <div>
+                                                        <span class="badge text-bg-primary">
+                                                            <h5>Members:</h5>
+                                                        </span>
+                                                        {{#each members}}
+                                                        <div><strong>Id :</strong> {{id}}
+                                                        </div>
+                                                        <div><strong>Name :</strong> {{name}}
+                                                        </div>
+                                                        <div><strong>Gender :</strong> {{gender}}
+                                                        </div>
+                                                        <div><strong>Age :</strong> {{age}}
+                                                        </div>
+                                                        </br>
+                                                        {{/each}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        {{/each}}
+
+                                    </ul>
+                                    {{/if}}
+                                </div>
+                            </li>
+                            {{/each}}
+                    </ul>
+                    {{#if groups}}
+                    <hr>
+                    <span class="badge text-bg-primary">
+                        <h4>Groups:</h4>
+                    </span>
+                    <br>
+                    <ul>
+                        {{#each groups}}
+
+                        <li>
+                            <div class="alert alert-warning" role="alert">
+                                <div>
+                                    <span class="badge rounded-pill text-bg-info">
+                                        <div><strong>Id :</strong> {{id}}
+                                        </div>
+                                    </span>
+
+                                    <div><strong>Name :</strong> {{name}}
+                                    </div>
+                                    <p>{{description}}</p>
+                                    <div>
+                                        <span class="badge text-bg-primary">
+                                            <h5>Members:</h5>
+                                        </span>
+                                        {{#each members}}
+                                        <div><strong>Id :</strong> {{id}}
+                                        </div>
+                                        <div><strong>Name :</strong> {{name}}
+                                        </div>
+                                        <div><strong>Gender :</strong> {{gender}}
+                                        </div>
+                                        <div><strong>Age :</strong> {{age}}
+                                        </div>
+                                        </br>
+                                        {{/each}}
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        {{/each}}
+
+
+                    </ul>
+
+                </div>
+                <br>
+                <hr>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+</div>

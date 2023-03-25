@@ -4,27 +4,7 @@
         {{#with newsBlock}}
         <h2 class="text-center">{{title}}</h2>
         <div class="row gy-3 gx-2">
-            {{#each cards}}
-            <div class="col-3">
-                <div class="card  h-100 text-bg-dark">
-                    <div class="card-header">{{title}}
-                        {{#if isTop}}
-                        <span class="badge text-bg-success rounded-pill text-capitalize"> Нова</span>
-                        {{/if}}
-                        {{#if isNew}}
-                        <span class="badge text-bg-danger rounded-pill text-capitalize"> Топ</span>
-                        {{/if}}
-                    </div>
-                    <div class="card-body">
-
-                        </h5>
-                        <p>{{description}}</p>
-                    </div>
-
-                </div>
-            </div>
-
-            {{/each}}
+            {{> shoppost}}
         </div>
         {{/with}}
 

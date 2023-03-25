@@ -1,0 +1,23 @@
+<div class="card m-1">
+    <header class="d-flex  justify-content-center py-3 mb-2 ">
+        {{#with navigation}}
+
+
+        <h3 class=" ps-2 mb-3 mb-md-0 me-md-auto fs-2 ">{{Logo}}</h3>
+
+
+        <ul class="nav">
+            {{#each links}}
+
+            <li class="nav-item"><a href="{{href}}" class="nav-link">{{text}}</a></li>
+
+            {{/each}}
+            <li class="nav-item">
+
+                <a href="#" class="nav-link disabled">Disabled</a>
+            </li>
+        </ul>
+        {{/with}}
+    </header>
+
+</div>

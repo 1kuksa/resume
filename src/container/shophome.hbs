@@ -1,27 +1,5 @@
 <main class="p-2">
-    <div class="card">
-        <header class="d-flex  justify-content-center py-3 mb-2 ">
-            {{#with navigation}}
 
-
-            <h3 class=" ps-2 mb-3 mb-md-0 me-md-auto fs-2 ">{{Logo}}</h3>
-
-
-            <ul class="nav">
-                {{#each links}}
-
-                <li class="nav-item"><a href="{{href}}" class="nav-link">{{text}}</a></li>
-
-                {{/each}}
-                <li class="nav-item">
-
-                    <a href="#" class="nav-link disabled">Disabled</a>
-                </li>
-            </ul>
-            {{/with}}
-        </header>
-
-    </div>
     <section class="mt-5">
         {{#with newsBlock}}
         <h2 class="text-center">{{title}}</h2>
@@ -70,34 +48,8 @@
             </div>
             {{/each}}
         </ul>
-        <div class="row gy-2 gx-2">
 
-            {{#each cards}}
-
-            <div class="col-4">
-                <div class="card h-1000">
-
-                    <img class="card-img-top" src={{image}} alt={{title}}>
-
-                    <div class="card-body">
-                        <span class="fs-2 card-title">{{title}} {{#if isHot}}<span
-                                class=" badge fs-6 text-bg-warning rounded-pill text-uppercase"> HOT!</span>{{/if}}
-                            {{#if isNew}}<span class="badge fs-6 text-bg-primary rounded-pill text-capitalaze">
-                                Нове</span>{{/if}}
-                        </span>
-                        <p class="pt-3">{{description}}</p>
-
-
-
-
-                    </div>
-                </div>
-            </div>
-
-
-
-            {{/each}}
-        </div>
+        {{> shopcard}}
         {{/with}}
 
     </section>
@@ -132,124 +84,7 @@
     </section>
 
     <hr class="m-5">
-    <section>
-        {{#with service}}
-        <div class="card text-bg-success">
-
-            <div class="card-body  text-center">
-                <h6 class="card-title">{{title}}</h6>
-                <p>{{description}}
-                </p>
-                {{#each buttons}}
-                <button href="{{link}}" class="btn btn-light">{{text}}</button>
-                {{/each}}
-            </div>
-
-
-        </div>
-        {{/with}}
-
-    </section>
+    {{> shopaction}}
     <hr class="m-5">
-    <section>
-        <div class="row gy-2 gx-2">
-            <div class="col-2 ms-3 ">
-                {{#each footer.[0]}}
 
-                <div class="col mb-3">
-
-                    <ul class="nav flex-column">
-                        <li class="nav-item "><a href="{{link}}" class="nav-link">{{text}}</a>
-                        </li>
-
-                    </ul>
-
-                </div>
-                {{/each}}
-            </div>
-
-
-            <div class="col-2 ms-3">
-                {{#each footer.[1]}}
-
-                <div class="col mb-3">
-
-                    <ul class="nav flex-column">
-                        <li class="nav-item "><a href="{{link}}" class="nav-link">{{text}}</a>
-                        </li>
-
-                    </ul>
-
-                </div>
-                {{/each}}
-            </div>
-
-
-            <div class="col-2 ms-3 ">
-                {{#each footer.[2]}}
-
-                <div class="col mb-3">
-
-                    <ul class="nav flex-column">
-                        <li class="nav-item "><a href="{{link}}" class="nav-link">{{text}}</a>
-                        </li>
-
-                    </ul>
-
-                </div>
-                {{/each}}
-            </div>
-
-
-            <div class="col-2 ms-3">
-                {{#each footer.[3]}}
-
-                <div class="col mb-3">
-
-                    <ul class="nav flex-column">
-                        <li class="nav-item "><a href="{{link}}" class="nav-link">{{text}}</a>
-                        </li>
-
-                    </ul>
-
-                </div>
-                {{/each}}
-            </div>
-
-
-            <div class="col-2 ms-3">
-                {{#each footer.[4]}}
-
-                <div class="col mb-3">
-
-                    <ul class="nav flex-column">
-                        <li class="nav-item "><a href="{{link}}" class="nav-link ">{{text}}</a>
-                        </li>
-
-                    </ul>
-
-                </div>
-                {{/each}}
-            </div>
-
-
-            <div class="col-2 ms-3">
-                {{#each footer.[5]}}
-
-                <div class="col mb-3">
-
-                    <ul class="nav flex-column">
-                        <li class="nav-item "><a href="{{link}}" class="nav-link ">{{text}}</a>
-                        </li>
-
-                    </ul>
-
-                </div>
-                {{/each}}
-
-
-
-            </div>
-        </div>
-    </section>
 </main>

@@ -1,0 +1,14 @@
+<div class="p-2 mt-4 col-12">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            {{#each breadcrumb}}
+
+
+            <li class="breadcrumb-item"><a {{#if url}} href="{{url}}  {{/if}}">{{name}}</a></li>
+
+
+
+            {{/each}}
+        </ol>
+    </nav>
+</div>

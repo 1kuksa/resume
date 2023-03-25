@@ -1,0 +1,28 @@
+<div class="row gy-2 gx-2">
+
+    {{#each cards}}
+
+    <div class="col-4">
+        <div class="card h-1000">
+
+            <img class="card-img-top" src={{image}} alt={{title}}>
+
+            <div class="card-body">
+                <span class="fs-2 card-title">{{title}} {{#if isHot}}<span
+                        class=" badge fs-6 text-bg-warning rounded-pill text-uppercase"> HOT!</span>{{/if}}
+                    {{#if isNew}}<span class="badge fs-6 text-bg-primary rounded-pill text-capitalaze">
+                        Нове</span>{{/if}}
+                </span>
+                <p class="pt-3">{{description}}</p>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    {{/each}}
+</div>

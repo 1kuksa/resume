@@ -1,0 +1,43 @@
+{{#each itemList}}
+<div>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-3">
+                    <div>{{number}}</div>
+                    <div><strong>{{status}}</strong></div>
+
+                </div>
+                <div class="col-3 text-center">
+                    {{#with amount}}
+                    <div>{{title}}:</div>
+                    <div><strong>{{value}}</strong></div>
+                    {{/with}}
+
+                </div>
+
+                <div class="col-4">
+                    <div class="row g-1">
+                        {{#each images}}
+
+                        <img style="max-width: 70px " src={{this}} alt="image">
+
+                        {{/each}}
+
+                    </div>
+                </div>
+                <div class="col-2">
+                    {{#with button}}
+                    {{#if isPrimary}}
+                    <a href="{{link}}" class=" btn btn-primary mt-1 ms-2">{{text}}</a>
+                    {{/if}}
+                    {{/with}}
+
+                </div>
+            </div>
+
+        </li>
+
+    </ul>
+</div>
+{{/each}}

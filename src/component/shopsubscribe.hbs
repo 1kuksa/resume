@@ -1,0 +1,28 @@
+<section>
+    <div class="card bg-dark">
+        <div class="d-flex  justify-content-center py-3  ">
+            {{#with subscribe}}
+
+            <div class="text-white ps-2 mb-3 mb-md-0 me-md-auto ">
+                <h2>{{header}} </h2>
+                <p>{{description}}</p>
+            </div>
+
+
+            <ul class="nav py-3 mb-2 ">
+                {{#each buttons}}
+
+                <li class="nav-item p-2">
+
+                    <button href="{{link}}" class="btn btn-primary ">{{text}}</button>
+                </li>
+
+                {{/each}}
+
+            </ul>
+            {{/with}}
+
+
+        </div>
+    </div>
+</section>

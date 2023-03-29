@@ -1,0 +1,118 @@
+<body>
+    <section>
+        {{#with formBlock}}
+        <div class="row">
+            <div class="col-8">
+                <h1>{{header}}</h1>
+                {{#with rating}}
+                <div class="mt-3 mb-3">{{title}}: {{value}}</div>
+                {{/with}}
+                {{#with actionBlock}}
+                <div>
+                    <ul class="nav nav-tabs mb-5">
+                        {{#each tabs}}
+
+                        <li class="nav-item col-4 text-center">
+                            {{#if isActive}}
+                            <div class="nav-link  active"> <strong>{{text}}</strong></div>{{else}}
+                            <div class="nav-link "> {{text}}</div>
+                            {{/if}}
+                        </li>
+
+
+                        {{/each}}
+                    </ul>
+                </div>
+                <hr class="mt-5 mb-5">
+                {{#with field}}
+
+
+
+                <div class="input-group mb-3 ">
+                    <input type="text" class="form-control p-3" placeholder="{{placeholder}}">
+                    {{#with button}}
+                    <a style="position: absolute;  right: 0; " class=" btn btn-secondary m-2 ">{{text}}</a>
+                    {{/with}}
+
+                </div>
+
+                {{/with}}
+                {{/with}}
+                <hr class="mt-5 mb-5">
+                {{#with feedbackBlock}}
+                <h2 class="pb-5">{{title}}</h2>
+                <div class="row">
+                    <div>
+                        {{#each buttons}}
+                        {{#if isWarning}}
+                        <a href="{{link}}" class=" btn btn-warning m-2">{{text}}</a>
+                        {{/if}}
+                        {{#if isSuccess}}
+                        <a href="{{link}}" class=" btn btn-success m-2">{{text}}</a>
+                        {{/if}}
+                        {{#if isDanger}}
+                        <a href="{{link}}" class=" btn btn-danger m-2">{{text}}</a>
+                        {{/if}}
+                        {{/each}}
+
+                    </div>
+                </div>
+                {{/with}}
+
+            </div>
+            <div class=" col-4">
+                {{#with goodsInfo}}
+                <div>
+                    <div class="card ">
+
+                        <img style="max-width: 200px " class="card-img-top p-3" src={{photo}} alt={{title}}>
+
+
+                        <span class="fs-2 p-2 card-title">{{name}}
+                        </span>
+
+                    </div>
+                </div>
+                <div>
+                    <div class="card mt-3 ">
+                        <span class="fs-2 p-2 card-title">{{price}}
+                        </span>
+
+                        {{#each buttons}}
+                        <div>
+                            {{#if isPrimary}}
+                            <a href="{{link}}" class=" btn btn-primary m-2">{{text}}</a>
+                            {{/if}}
+                        </div>
+                        <div>
+                            {{#if isSecondary}}
+                            <a href="{{link}}" class=" btn btn-secondary m-2 mb-3">{{text}}</a>
+                            {{/if}}
+                        </div>
+
+                        {{/each}}
+
+
+                    </div>
+                </div>
+                {{#with seller}}
+                <div>
+                    <div class="card mt-3 ">
+                        <span class="fs-6 p-2 card-title">{{title}}: <strong>{{value}}</strong>
+                        </span>
+
+
+                    </div>
+                </div>
+                {{/with}}
+                {{/with}}
+
+            </div>
+
+        </div>
+        {{/with}}
+    </section>
+    <hr class="mt-5 mb-5">
+    {{> reviewItem}}
+    {{> shopaction}}
+</body>

@@ -1,0 +1,103 @@
+<section>
+    {{#each reviewList}}
+    <div>
+        <div class="card mb-5">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        {{#with title}}
+                        <div class="col-9">
+                            <strong><span class="fs-4 card-title">{{userName}}</span>
+                            </strong>
+                            <div> <span class="fs-6 card-title">{{caption}}</span> </div>
+                        </div>
+                        <div class="col-3 mt-3"><span class="fs-6 card-title">{{date}}</span></div>
+
+                        {{/with}}
+
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                {{#with reviewBody}}
+                {{#with seller}}
+                <div class="pt-2">
+                    <span class="fs-6 p-2  ">{{title}}: {{value}} </span>
+                </div>
+                {{/with}}
+                {{#with rating}}
+                <div class="pt-3 pb-3">
+                    <span class="fs-6 p-2  ">{{title}}: {{value}} </span>
+                </div>
+                {{/with}}
+                {{#with text}}
+                <div class="ps-2 pb-3 pe-3">
+                    <span class="fs-6 p-2  ">{{this}} </span>
+                </div>
+                {{/with}}
+                {{#with advantages}}
+                <div class="ps-2 pb-3 ">
+                    <span class="fs-6 "> <strong>{{title}}:</strong>
+                    </span>
+                    <div>
+                        <span>{{text}}</span>
+                    </div>
+
+                </div>
+                {{/with}}
+                {{#with disadvantages}}
+                <div class="ps-2 pb-3 ">
+                    <span class="fs-6 "> <strong>{{title}}:</strong>
+                    </span>
+                    <div>
+                        <span>{{text}}</span>
+                    </div>
+
+                </div>
+                {{/with}}
+                <div class="row g-1">
+                    {{#each images}}
+
+                    <img style="max-width: 200px " src={{this}} alt="image">
+
+                    {{/each}}
+
+                </div>
+            </div>
+
+            {{#each coments}}
+
+            <div class=" card ps-2 pb-3 ms-5 mt-4 mb-4 me-3">
+                <div class="row">
+                    <div class="col-9 pt-2">
+                        <strong>{{userName}}</strong>
+                    </div>
+                    <div class="col-3 pt-2">{{date}}</div>
+                    <div class="pt-2">
+                        <span>{{text}}</span>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+
+
+
+            {{/with}}
+
+
+
+
+
+        </div>
+    </div>
+
+
+    </div>
+
+
+
+    {{/each}}
+</section>

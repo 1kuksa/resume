@@ -1,0 +1,61 @@
+{{#each goodsList}}
+<div class="col-6">
+    <div class="card h-100">
+
+
+
+        <img class="card-img-top" src={{img}} alt="image">
+        <div class="p-2">
+            {{#if isHot}}<span class=" badge fs-6 text-bg-warning rounded-pill text-uppercase ">
+                HOT!</span>{{/if}}
+            {{#if isNew}}<span class="badge fs-6 text-bg-primary rounded-pill text-capitalaze ">
+                Нове</span>{{/if}}</span>
+            {{#if isFast}}
+            <div class="pt-2 pb-2">
+                <span class="badge fs-6 text-bg-secondary  text-capitalaze">Швидка
+                    доставка</span>
+            </div>
+            {{/if}}
+            {{#if isFree}}
+            <div class="pt-2 pb-2">
+                <span class=" badge fs-6 text-bg-success text-capitalaze">Безкоштовна
+                    доставка
+                </span>
+            </div>
+            {{/if}}
+            <div>
+                <div class="fs-3 pt-3">
+                    <strong>{{name}}</strong>
+                </div>
+                {{#with review}}
+                <div class=" pt-3">
+                    <span>{{amount}} {{text}}</span>
+                </div>
+                {{/with}}
+
+            </div>
+            <div class="pt-3">
+                <span class="fs-4">{{price}}</span>
+            </div>
+            <div class="pt-3">
+                <span class="fs-4">{{delivery}}</span>
+            </div>
+            <div>
+                {{#each buttons}}
+                <div>
+                    {{#if isPrimary}}
+                    <a href="{{link}}" class=" btn btn-primary mt-3">{{text}}</a>
+                    {{/if}}
+                </div>
+                <div>
+                    {{#if isSecondary}}
+                    <a href="{{link}}" class=" btn btn-secondary  mt-3 mb-3">{{text}}</a>
+                    {{/if}}
+                </div>
+
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
+{{/each}}

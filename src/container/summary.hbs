@@ -9,21 +9,36 @@
 
     <main>
         <section class="mb-3">
-            {{> title data=summary.title big=true}}
-            <div>
-                <p>
-                    {{summary.text}}
-                </p>
+            <div class="row">
+
+
+                <div class="card">
+                    <div class="card-header">
+
+                        {{> title data=summary.title big=true}}
+                    </div>
+                    <div class="card-body pt-2">
+                        <p>
+                            {{summary.text}}
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
 
         {{#with experience}}
         <section>
-            {{> title data=title}}
-            <div>
-                <p>
-                    {{text}}
-                </p>
+            <div class="row">
+                <div class="card">
+                    <div class="card-header">
+                        {{> title data=title}}
+                    </div>
+                    <div class="card-body pt-2">
+                        <p>
+                            {{text}}
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
         {{/with}}

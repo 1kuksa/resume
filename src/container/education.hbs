@@ -2,23 +2,42 @@
     {{#with main}}
     <main>
         <section>
-            {{> title data='My educationss' big=true}}
-            <ul>
-                {{#each educations}}
-                <li>{{name}}
-                    {{#unless isend}} ===(ще в процесі) {{/unless }}
-                </li>
-                {{/each}}
+            <div class="row">
+                <div class="card">
+                    <div class="card-header">
+                        {{> title data='My educationss' big=true}}
+                    </div>
+                    <div class="card-body">
 
-            </ul>
+                        <ul>
+                            {{#each educations}}
+                            <li>{{name}}
+                                {{#unless isend}} <span
+                                    class=" badge fs-6 text-bg-primary rounded-pill text-capitalize"> Ще в
+                                    процесі!</span>{{/unless }}
+                            </li>
+                            {{/each}}
+
+                        </ul>
+                    </div>
+                </div>
         </section>
         <section>
-            {{> title data="My certificats" }}
-            {{#each certificates}}
-            <li>{{name}}
-                <strong>- ID сертифікату ({{id}})</strong>
-            </li>
-            {{/each}}
+            <div class="row">
+                <div class="card mt-3">
+                    <div class="card-header">
+                        {{> title data="My certificats" }}
+                    </div>
+                    <div class="card-body">
+
+
+                        {{#each certificates}}
+                        <li>{{name}}
+                            <strong>- ID сертифікату ({{id}})</strong>
+                        </li>
+                        {{/each}}
+                    </div>
+                </div>
         </section>
     </main>
 

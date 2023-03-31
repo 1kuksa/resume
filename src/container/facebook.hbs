@@ -22,13 +22,13 @@
                     </div>
                     <div><strong>Age :</strong> {{age}}
                     </div>
-                    <br>
 
-                    <span class="badge text-bg-primary">
+
+                    <span class="badge text-bg-primary mt-2">
                         <h4>Friends:</h4>
                     </span>
-                    <br>
-                    <ul>
+
+                    <ul class="pt-4">
                         {{#each friends}}
                         <div>
                             <li>
@@ -45,8 +45,8 @@
                                     <div><strong>Age :</strong> {{age}}
 
                                     </div>
-                                    <br>
-                                    <span class="badge text-bg-primary">
+
+                                    <span class="badge text-bg-primary mt-3">
                                         <h5>Mutual friends:</h5>
                                     </span>
                                     {{#each mutual_friends}}
@@ -58,13 +58,13 @@
                                     </div>
                                     <div><strong>Age :</strong> {{age}}
                                     </div>
-                                    <br>
+
 
 
 
 
                                     {{#if mutual_friends }}
-                                    <hr>
+                                    <hr class="mt-3 mb-3">
                                     <span class="badge text-bg-primary">
                                         <h5>Mutual friends:</h5>
                                     </span>
@@ -88,7 +88,7 @@
                                     {{/each}}
 
                                     {{#if groups }}
-                                    <hr>
+                                    <hr class="mt-3 mb-3">
                                     <span class="badge text-bg-primary">
                                         <h4>Groups:</h4>
                                     </span>
@@ -120,7 +120,7 @@
                                                         </div>
                                                         <div><strong>Age :</strong> {{age}}
                                                         </div>
-                                                        </br>
+
                                                         {{/each}}
                                                     </div>
                                                 </div>
@@ -135,12 +135,12 @@
                             {{/each}}
                     </ul>
                     {{#if groups}}
-                    <hr>
+                    <hr class="mt-3 mb-3">
                     <span class="badge text-bg-primary">
                         <h4>Groups:</h4>
                     </span>
-                    <br>
-                    <ul>
+
+                    <ul class="pt-4">
                         {{#each groups}}
 
                         <li>
@@ -167,7 +167,7 @@
                                         </div>
                                         <div><strong>Age :</strong> {{age}}
                                         </div>
-                                        </br>
+
                                         {{/each}}
                                     </div>
                                 </div>
@@ -179,8 +179,8 @@
                     </ul>
 
                 </div>
-                <br>
-                <hr>
+
+                <hr class="mt-3 mb-3">
             </li>
             {{/if}}
             {{/each}}

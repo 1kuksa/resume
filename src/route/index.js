@@ -40,7 +40,117 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index',
+    blockname: {
+      name: 'Oleksandr',
+      surname: 'Kuksa',
+      nameProject: 'Resume Project',
+    },
+    header: {
+      title: 'Список сторінок',
+      description:
+        'Зараз перед Вашою увагою список сторінок. Які я створив при вивчені HTML на курсах від компанії IT-Brains',
+    },
+    page: [
+      {
+        text: 'Home',
+        href: '/',
+      },
+      {
+        text: 'Summary',
+        href: '/summary',
+      },
+      {
+        text: 'Skills',
+        href: '/skills',
+      },
+      {
+        text: 'Education',
+        href: '/educ',
+      },
+      {
+        text: 'Work',
+        href: '/work',
+      },
+      {
+        text: 'Person',
+        href: '/person',
+      },
+      {
+        text: 'Bio',
+        href: '/bio',
+      },
+      {
+        text: 'Program',
+        href: '/program',
+      },
+      {
+        text: 'Web',
+        href: '/web',
+      },
+      {
+        text: 'JS',
+        href: '/js',
+      },
+      {
+        text: 'Car',
+        href: '/car',
+      },
+      {
+        text: 'Mac',
+        href: '/mac',
+      },
+      {
+        text: 'Facebook',
+        href: '/facebook',
+      },
+      {
+        text: 'Task21',
+        href: '/task21',
+      },
+      {
+        text: 'Task22',
+        href: '/task22',
+      },
+      {
+        text: 'Task31',
+        href: '/task31',
+      },
+      {
+        text: 'Shophome',
+        href: '/shophome',
+      },
+      {
+        text: 'Shopproduct',
+        href: '/shopproduct',
+      },
+      {
+        text: 'Shopnews',
+        href: '/shopnews',
+      },
+      {
+        text: 'Shoporder',
+        href: '/shoporder',
+      },
+      {
+        text: 'Shopcart',
+        href: '/shopcart',
+      },
+      {
+        text: 'Shopprofile',
+        href: '/shopprofile',
+      },
+      {
+        text: 'Shopreview',
+        href: '/shopreview',
+      },
+      {
+        text: 'Shopcatalog',
+        href: '/shopcatalog',
+      },
+    ],
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
@@ -3730,5 +3840,6 @@ router.get('/css', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
+
 // Підключаємо роутер до бек-енду
 module.exports = router

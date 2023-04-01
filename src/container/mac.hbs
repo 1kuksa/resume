@@ -26,7 +26,7 @@
                 </center>
                 <ul>
                     {{#with features}}
-                    <li>
+                    <li class="pt-3">
                         <span class="badge text-bg-danger">
                             <h6>Processor:</h6>
                         </span>
@@ -43,7 +43,7 @@
                         </div>
                         {{/with}}
                     </li>
-                    </br>
+
                     <li>
                         <span class="badge text-bg-danger">
                             <h6>Memory:</h6>
@@ -57,9 +57,9 @@
                         </div>
 
                         {{/with}}
-                        </br>
+
                     </li>
-                    <li>
+                    <li class="pt-3">
                         <span class="badge text-bg-danger">
                             <h6>Storage:</h6>
                         </span>
@@ -69,9 +69,9 @@
                         <div><strong>Size :</strong> {{size}}
                         </div>
                         {{/with}}
-                        </br>
+
                     </li>
-                    <li>
+                    <li class="pt-3">
                         <span class="badge text-bg-danger">
                             <h6>Display:</h6>
                         </span>
@@ -91,9 +91,9 @@
                         </div>
 
                         {{/with}}
-                        </br>
+
                     </li>
-                    <li>
+                    <li class="pt-3">
                         <span class="badge text-bg-danger">
                             <h6>Graphics:</h6>
                         </span>
@@ -105,9 +105,9 @@
                         <div><strong>Memory :</strong> {{memory}}
                         </div>
                         {{/with}}
-                        </br>
+
                     </li>
-                    <li>
+                    <li class="pt-3">
                         <span class="badge text-bg-danger">
                             <h6>Ports:</h6>
                         </span>
@@ -136,11 +136,11 @@
 
                             {{/each}}
                         </ul>
-                        </br>
+
                     </li>
 
                     </li>
-                    <li>
+                    <li class="pt-3">
                         <span class="badge text-bg-danger">
                             <h6>Battery:</h6>
                         </span>
@@ -152,9 +152,9 @@
                         <div><strong>Life :</strong> {{life}}
                         </div>
                         {{/with}}
-                        </br>
+
                     </li>
-                    <li>
+                    <li class="pt-3">
                         <span class="badge text-bg-danger">
                             <h6>Weight:</h6>
                         </span>
@@ -162,9 +162,9 @@
                         <div><strong>Weight :</strong> {{weight}}
                         </div>
 
-                        </br>
+
                     </li>
-                    <li>
+                    <li class="pt-3">
                         <span class="badge text-bg-danger">
                             <h6>Dimensions:</h6>
                         </span>
@@ -176,9 +176,9 @@
                         <div><strong>Depth :</strong> {{depth}}
                         </div>
                         {{/with}}
-                        </br>
+
                     </li>
-                    <li>
+                    <li class="pt-3">
                         <span class="badge text-bg-danger">
                             <h6>Operating system:</h6>
                         </span>
@@ -186,19 +186,18 @@
                         <div><strong>Operating system :</strong> {{operating_system}}
                         </div>
 
-                        </br>
+
                     </li>
-                    <li>
+                    <li class="pt-3">
                         <span class="badge text-bg-danger">
                             <h6>Accessories:</h6>
                         </span>
                         <ul>
                             {{#each accessories}}
-                            <li>
+                            <li class="pt-3">
                                 <div><strong>{{name}} </strong>
                                     {{>button4 data=price}}
-                                    </br>
-                                    </br>
+
 
                                 </div>
                             </li>
